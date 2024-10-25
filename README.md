@@ -1,5 +1,7 @@
 # keras_MobileNetV2
 
+### [데이터셋 출처](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=&topMenu=&aihubDataSe=data&dataSetSn=173)
+
 ### 데이터셋 구성
 훈련 이미지 개수: 41052  
 훈련 라벨(키포인트) 개수: 41052  
