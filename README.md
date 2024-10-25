@@ -15,3 +15,9 @@ training dataset의 경우 1개, val dataset의 경우 2개의 json파일에 문
 ### 현재 Batch_size 32 * 3 및 64 * 3로 100 epoch 돌리는중
 
 하위 pull request test
+### 팀원들과 공유할 내용  
+1. csv파일 구성
+2. GPU / strategy = tf.distribute.MirroredStrategy()
+3. batch_size 관련
+4. 처음 돌린 모델에서 실수한 점(early_stop, reduce_lr)
+5. load_model을 통해 다시 학습시킬때 실수한 점(OOM when allocating tensor with shape[192,576,16,16])
