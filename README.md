@@ -16,10 +16,10 @@ training dataset의 경우 1개, val dataset의 경우 2개의 json파일에 문
 ## 폴더내 파일 설명
 ### V2_s224_b16_lr001.ipynb  
 : MobileNetV2를 이용 / 이미지 사이즈를 224로 변경 / batchsize 16 / learning rate 0.001 고정 / 100 epochs  
-Best Model Name : b16_lr001.h5(https://drive.google.com/drive/folders/1K-WdH8WnHdSLzUm-ucGt8p5QEYICQ-pm)
+
 ### V2_s224_b32_lr001.ipynb  
 : MobileNetV2를 이용 / 이미지 사이즈를 224로 변경 / batchsize 32 / learning rate 0.001 고정 / 100 epochs   
-Best Model Name : b32_lr001.h5(https://drive.google.com/drive/folders/1K-WdH8WnHdSLzUm-ucGt8p5QEYICQ-pm)
+
 
 ## 진행하면서 배운점
 1. 학습 경향성을 보기 위해 고정된 learning rate(ex 0.001)로 돌려보는게 좋다.
