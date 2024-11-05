@@ -16,9 +16,15 @@ training dataset의 경우 1개, val dataset의 경우 2개의 json파일에 문
 ## 폴더내 파일 설명
 ### V2_s224_b16_lr001.ipynb  
 : MobileNetV2를 이용 / 이미지 사이즈를 224로 변경 / batchsize 16 / learning rate 0.001 고정 / 100 epochs  
+Epoch 83: val_loss improved from 2.90543 to 2.88290, saving model to b16_lr001.h5  
+856/856 [==============================] - 164s 190ms/step - loss: 17.9087 - mae: 3.3129 - val_loss: 2.8829 - val_mae: 1.2605
 
 ### V2_s224_b32_lr001.ipynb  
-: MobileNetV2를 이용 / 이미지 사이즈를 224로 변경 / batchsize 32 / learning rate 0.001 고정 / 100 epochs   
+: MobileNetV2를 이용 / 이미지 사이즈를 224로 변경 / batchsize 32 / learning rate 0.001 고정 / 100 epochs  
+Epoch 87: val_loss improved from 5.73788 to 5.03280, saving model to b32_lr001.h5  
+428/428 [==============================] - 126s 294ms/step - loss: 18.7572 - mae: 3.3922 - val_loss: 5.0328 - val_mae: 1.6460
+
+
 
 
 ## 진행하면서 배운점
