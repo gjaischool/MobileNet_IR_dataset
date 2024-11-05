@@ -51,6 +51,13 @@ Epoch 52: val_loss improved from 0.00014 to 0.00007, saving model to v3l_adam_lr
 134s 156ms/step - loss: 2.6769e-05 - mae: 0.0039 - val_loss: 7.1007e-05 - val_mae: 0.0063  
 ![1](https://github.com/user-attachments/assets/361171a3-51f9-41ea-b1e8-83caef7ea532)
 
+### 8. V3s_adam_lr_norm.ipynb  
+: MobileNetV3 small / scale img size 224 / batchsize 16 / Adam / -50ep : lr 0.001 51ep- : lr 0.0001 / 100 epochs  
+Epoch 98: val_loss improved from 0.00006 to 0.00006, saving model to v3s_adam_lr.h5   
+102s 119ms/step - loss: 3.0862e-05 - mae: 0.0041 - val_loss: 6.4468e-05 - val_mae: 0.0058 - lr: 1.0000e-04  
+![1](https://github.com/user-attachments/assets/14d22431-1608-40f2-acb6-9e22f8d75c31)
+
+
 
 
 
