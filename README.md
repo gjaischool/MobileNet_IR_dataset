@@ -14,15 +14,32 @@
 training dataset의 경우 1개, val dataset의 경우 2개의 json파일에 문제가 발생했습니다.
 
 ## 폴더내 파일 설명
-### V2_s224_b16_lr001.ipynb  
-: MobileNetV2 / scale img 224 / batchsize 16 / learning rate 0.001 / 100 epochs  
+### 1. V2_s224_b16_lr001.ipynb  
+: MobileNetV2 / scale img size 224 / batchsize 16 / Adam / lr 0.001 / 100 epochs  
 Epoch 83: val_loss improved from 2.90543 to 2.88290, saving model to b16_lr001.h5  
-856/856 [==============================] - 164s 190ms/step - loss: 17.9087 - mae: 3.3129 - val_loss: 2.8829 - val_mae: 1.2605
+- 164s 190ms/step - loss: 17.9087 - mae: 3.3129 - val_loss: 2.8829 - val_mae: 1.2605
 
-### V2_s224_b32_lr001.ipynb  
-: MobileNetV2 / scale img 224 / batchsize 32 / learning rate 0.001 / 100 epochs  
+### 2. V2_s224_b32_lr001.ipynb  
+: MobileNetV2 / scale img size 224 / batchsize 32 / Adam / lr 0.001 / 100 epochs  
 Epoch 87: val_loss improved from 5.73788 to 5.03280, saving model to b32_lr001.h5  
-428/428 [==============================] - 126s 294ms/step - loss: 18.7572 - mae: 3.3922 - val_loss: 5.0328 - val_mae: 1.6460
+- 126s 294ms/step - loss: 18.7572 - mae: 3.3922 - val_loss: 5.0328 - val_mae: 1.6460
+
+### 3. V3s_s224_b16_lr001.ipynb  
+: MobileNetV3 small / scale img size 224 / batchsize 16 / Adam / -50ep : lr 0.001 51ep- : lr 0.0005 / 100 epochs  
+Epoch 65: val_loss improved from 32.58451 to 27.78898, saving model to v3s_b16_lr001.h5   
+- 130s 152ms/step - loss: 36.0579 - mae: 4.7001 - val_loss: 27.7890 - val_mae: 3.8681 - lr: 5.0000e-04
+
+### 4. V3s_SGD_b16_lr001.ipynb  
+: MobileNetV3 small / scale img size 224 / batchsize 16 / SGD(momentum = 0.9) / -50ep : lr 0.001 51ep- : lr 0.0005 / 100 epochs 
+Epoch 81: val_loss improved from 9.32639 to 6.76336, saving model to v3s_sgd_b16_lr001.h5  
+- 130s 152ms/step - loss: 40.0433 - mae: 4.9617 - val_loss: 6.7634 - val_mae: 1.9311 - lr: 5.0000e-04
+
+### 5. V3l_s224_b16_lr001.ipynb  
+: MobileNetV3 large / scale img size 224 / batchsize 16 / Adam / -50ep : lr 0.001 51ep- : lr 0.0001 / 100 epochs 
+Epoch 100: val_loss improved from 3.50238 to 3.10394, saving model to v3l_b16_lr001.h5  
+- 143s 166ms/step - loss: 23.1025 - mae: 3.7658 - val_loss: 3.1039 - val_mae: 1.2559 - lr: 1.0000e-04
+
+### 6.
 
 
 
