@@ -1,4 +1,4 @@
-# keras_MobileNetV2
+# keras_MobileNet
 
 ### [데이터셋 출처](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=&topMenu=&aihubDataSe=data&dataSetSn=173)
 
@@ -21,14 +21,10 @@ Best Model Name : b16_lr001.h5(https://drive.google.com/drive/folders/1K-WdH8WnH
 : MobileNetV2를 이용 / 이미지 사이즈를 224로 변경 / batchsize 32 / learning rate 0.001 고정 / 100 epochs   
 Best Model Name : b32_lr001.h5(https://drive.google.com/drive/folders/1K-WdH8WnHdSLzUm-ucGt8p5QEYICQ-pm)
 
-
-
-
-
-
-### 팀원들과 공유할 내용  
-1. csv파일 구성
-2. GPU / strategy = tf.distribute.MirroredStrategy()
-3. batch_size 관련
-4. 처음 돌린 모델에서 실수한 점(early_stop, reduce_lr)
-5. load_model을 통해 다시 학습시킬때 실수한 점(OOM when allocating tensor with shape[192,576,16,16])
+## 진행하면서 배운점
+1. 학습 경향성을 보기 위해 고정된 learning rate(ex 0.001)로 돌려보는게 좋다.
+2. 모델에 따라 json파일을 변환 시키는 작업이 필요하다.
+3. 720 * 1280 이미지를 224 * 224로 축소하는 과정에서 패딩 추가
+4. gpu 3장을 활용하여 모델 학습
+5. 학습 후 load_model 이용할때 역시 gpu 3장 활용
+6. 기존에는 keypoint 값을 0~244로 진행하니 학습이 잘되지 않는 것을 발견
