@@ -30,12 +30,12 @@ Epoch 65: val_loss improved from 32.58451 to 27.78898, saving model to v3s_b16_l
 130s 152ms/step - loss: 36.0579 - mae: 4.7001 - val_loss: 27.7890 - val_mae: 3.8681 - lr: 5.0000e-04
 
 ### 4. V3s_SGD_b16_lr001.ipynb  
-: MobileNetV3 small / scale img size 224 / batchsize 16 / SGD(momentum = 0.9) / -50ep : lr 0.001 51ep- : lr 0.0005 / 100 epochs 
+: MobileNetV3 small / scale img size 224 / batchsize 16 / SGD(momentum = 0.9) / -50ep : lr 0.001 51ep- : lr 0.0005 / 100 epochs   
 Epoch 81: val_loss improved from 9.32639 to 6.76336, saving model to v3s_sgd_b16_lr001.h5  
 130s 152ms/step - loss: 40.0433 - mae: 4.9617 - val_loss: 6.7634 - val_mae: 1.9311 - lr: 5.0000e-04
 
 ### 5. V3l_s224_b16_lr001.ipynb  
-: MobileNetV3 large / scale img size 224 / batchsize 16 / Adam / -50ep : lr 0.001 51ep- : lr 0.0001 / 100 epochs 
+: MobileNetV3 large / scale img size 224 / batchsize 16 / Adam / -50ep : lr 0.001 51ep- : lr 0.0001 / 100 epochs   
 Epoch 100: val_loss improved from 3.50238 to 3.10394, saving model to v3l_b16_lr001.h5  
 143s 166ms/step - loss: 23.1025 - mae: 3.7658 - val_loss: 3.1039 - val_mae: 1.2559 - lr: 1.0000e-04
 
@@ -43,6 +43,13 @@ Epoch 100: val_loss improved from 3.50238 to 3.10394, saving model to v3l_b16_lr
 : MobileNetV2 / scale img size 224 / batchsize 16 / RMSprop / reduce lr / 100 epochs  
 Epoch 75: val_loss improved from 2.13493 to 2.12921, saving model to v2_b16_rmsprop.h5   
 147s 171ms/step - loss: 16.0767 - mae: 3.1307 - val_loss: 2.1292 - val_mae: 1.0208 - lr: 4.0000e-05
+
+### 7. V3l_adam_lr001_norm.ipynb  
+이전 모델에서는 학습이 되지 않는 것 같아 팀원들과 코드 리뷰중 keypoint 좌표가 정규화 하지 않는 것을 발견
+: MobileNetV3 large / scale img size 224 / batchsize 16 / Adam / lr 0.001 / 100 epochs  
+Epoch 52: val_loss improved from 0.00014 to 0.00007, saving model to v3l_adam_lr001.h5   
+134s 156ms/step - loss: 2.6769e-05 - mae: 0.0039 - val_loss: 7.1007e-05 - val_mae: 0.0063  
+![1](https://github.com/user-attachments/assets/361171a3-51f9-41ea-b1e8-83caef7ea532)
 
 
 
