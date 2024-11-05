@@ -57,6 +57,9 @@ Epoch 98: val_loss improved from 0.00006 to 0.00006, saving model to v3s_adam_lr
 102s 119ms/step - loss: 3.0862e-05 - mae: 0.0041 - val_loss: 6.4468e-05 - val_mae: 0.0058 - lr: 1.0000e-04  
 ![1](https://github.com/user-attachments/assets/14d22431-1608-40f2-acb6-9e22f8d75c31)
 
+### 모델 총 정리  
+![image](https://github.com/user-attachments/assets/6e2f3bfc-bb4d-4edf-939c-8a4a2799c59d)
+
 
 
 
