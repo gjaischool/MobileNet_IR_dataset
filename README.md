@@ -14,6 +14,7 @@
 training dataset의 경우 1개, val dataset의 경우 2개의 json파일에 문제가 발생했습니다.
 
 ## 폴더내 파일 설명
+[각 파일의 best model](https://drive.google.com/drive/folders/1K-WdH8WnHdSLzUm-ucGt8p5QEYICQ-pm)
 ### 1. V2_s224_b16_lr001.ipynb  
 : MobileNetV2 / scale img size 224 / batchsize 16 / Adam / lr 0.001 / 100 epochs  
 Epoch 83: val_loss improved from 2.90543 to 2.88290, saving model to b16_lr001.h5  
