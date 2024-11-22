@@ -46,7 +46,7 @@ Epoch 75: val_loss improved from 2.13493 to 2.12921, saving model to v2_b16_rmsp
 147s 171ms/step - loss: 16.0767 - mae: 3.1307 - val_loss: 2.1292 - val_mae: 1.0208 - lr: 4.0000e-05
 
 ### 7. V3l_adam_lr001_norm.ipynb  
-이전 모델에서는 학습이 되지 않는 것 같아 팀원들과 코드 리뷰중 keypoint 좌표가 정규화 하지 않는 것을 발견
+이전 모델에서는 학습이 되지 않는 것 같아 팀원들과 코드 리뷰중 keypoint 좌표가 정규화 하지 않는 것을 발견  
 : MobileNetV3 large / scale img size 224 / batchsize 16 / Adam / lr 0.001 / 100 epochs  
 Epoch 52: val_loss improved from 0.00014 to 0.00007, saving model to v3l_adam_lr001.h5   
 134s 156ms/step - loss: 2.6769e-05 - mae: 0.0039 - val_loss: 7.1007e-05 - val_mae: 0.0063  
@@ -56,21 +56,52 @@ Epoch 52: val_loss improved from 0.00014 to 0.00007, saving model to v3l_adam_lr
 : MobileNetV3 small / scale img size 224 / batchsize 16 / Adam / -50ep : lr 0.001 51ep- : lr 0.0001 / 100 epochs  
 Epoch 98: val_loss improved from 0.00006 to 0.00006, saving model to v3s_adam_lr.h5   
 102s 119ms/step - loss: 3.0862e-05 - mae: 0.0041 - val_loss: 6.4468e-05 - val_mae: 0.0058 - lr: 1.0000e-04  
-![1](https://github.com/user-attachments/assets/14d22431-1608-40f2-acb6-9e22f8d75c31)
+![1](https://github.com/user-attachments/assets/14d22431-1608-40f2-acb6-9e22f8d75c31)  
+
+### 9. V2_adam_lr_norm.ipynb  
+: MobileNetV3 small / scale img size 224 / batchsize 16 / Adam / -50ep : lr 0.001 51ep- : lr 0.0001 / 100 epochs  
+Epoch 92: val_loss improved from 0.00005 to 0.00005, saving model to v2_adam_norm.h5   
+127s 148ms/step - loss: 2.3603e-05 - mae: 0.0036 - val_loss: 4.7635e-05 - val_mae: 0.0049 - lr: 1.0000e-04  
+![image](https://github.com/user-attachments/assets/3ef18a76-c12e-4db5-8be5-2266feeeb7dc)   
+
+### 10. V3l_adam_aug.ipynb  
+: MobileNetV3 large / scale img size 224 / batchsize 16 / Adam / -100ep : lr 0.001 101ep- : lr 0.0001 / 200 epochs  
+Epoch 113: val_loss improved from 0.00004 to 0.00004, saving model to v3l_adam_lr001_aug.h5 
+371s 72ms/step - loss: 2.3507e-05 - mae: 0.0036 - val_loss: 3.7017e-05 - val_mae: 0.0042 - lr: 1.0000e-04  
+<중간에 커널이 끊어져 history 날아감. csv_logger 사용하자>  
+
+### 10-1. V3l_adam_aug.ipynb(v3l_adam_lr001_aug.h5 추가 학습)
+: MobileNetV3 large / scale img size 224 / batchsize 16 / RMSprop / 1e-7 / 100 epochs
+ Epoch 61: val_loss improved from 0.00004 to 0.00004, saving model to v3l_rmsprop_aug.h5    
+ 368s 72ms/step - loss: 2.4243e-05 - mae: 0.0037 - val_loss: 3.6058e-05 - val_mae: 0.0042
+![image](https://github.com/user-attachments/assets/e8fb06d0-c7ae-49d4-aeab-ca0fef5443e6)
+
+### 10-2. V3l_adam_aug.ipynb(v3l_adam_lr001_aug.h5 추가 학습)  
+: MobileNetV3 large / scale img size 224 / batchsize 16 / RMSprop / 1e-3 / 100 epochs  
+Epoch 91: val_loss improved from 0.00004 to 0.00004, saving model to v3l_rmsprop_1e-3_aug.h5  
+374s 73ms/step - loss: 2.3127e-05 - mae: 0.0036 - val_loss: 3.5635e-05 - val_mae: 0.0041 
+![image](https://github.com/user-attachments/assets/d5100392-4a1d-468f-9077-aa29cccc2a75)  
+
+### 11. V2_adam_aug.ipynb(현재 이 파일은 날아감...)
+: MobileNetV2 / scale img size 224 / batchsize 16 / Adam / 1e-3 / 100 epochs  
+Epoch 70: val_loss improved from 0.00027 to 0.00021, saving model to v2_adam_lr001_aug.h5   
+332s 131ms/step - loss: 1.6884e-04 - mae: 0.0102 - val_loss: 2.0608e-04 - val_mae: 0.0100  
+![image](https://github.com/user-attachments/assets/342aac8e-cc01-4541-b11c-f492cfa8c8b1)
+
+### 12. V2_adam_half_aug.ipynb  
+: MobileNetV2 / scale img size 224 / batchsize 16 / Adam / 1e-3 / 100 epochs   
+Epoch 100: val_loss improved from 0.00018 to 0.00014, saving model to v2_adam_lr001_half_aug.h5 
+202s 79ms/step - loss: 2.7715e-04 - mae: 0.0132 - val_loss: 1.3596e-04 - val_mae: 0.0093
+![image](https://github.com/user-attachments/assets/256ec0a1-5a0e-45d9-99ba-5ceb958ad514)
 
 ### 모델 총 정리  
-![image](https://github.com/user-attachments/assets/6e2f3bfc-bb4d-4edf-939c-8a4a2799c59d)
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/2b45ac0e-d0b9-4658-a6fd-d8fae2a081c7)
 
 ## 진행하면서 배운점
 1. 학습 경향성을 보기 위해 고정된 learning rate(ex 0.001)로 돌려보는게 좋다.
 2. 모델에 따라 json파일을 변환 시키는 작업이 필요하다.
-3. 720 * 1280 이미지를 224 * 224로 축소하는 과정에서 패딩 추가
+3. 720 * 1280 원본 비율 유지하면서 224 * 224로 축소하는 과정에서 패딩 추가
 4. gpu 3장을 활용하여 모델 학습
 5. 학습 후 load_model 이용할때 역시 gpu 3장 활용
-6. 기존에는 keypoint 값을 0~244로 진행하니 학습이 잘되지 않는 것을 발견
+6. 기존에는 keypoint 값을 0~244로 진행하니 학습이 잘되지 않는 것을 발견(정규화의 중요성)
+7. 랜덤 증강이다 보니 학습에 적절하지 않는 데이터가 존재해서 학습이 중간에 멈춤.
